@@ -30,14 +30,14 @@ public class MyClass {
 
     public static void innerClass() {
         System.out.println(dot + "innerClass" + dot + "\n");
-        Robot.Battery battery = new Robot.Battery(); //Battery can access because it is static
+        Robot.Battery battery = new Robot.Battery(); //Battery can access because it is static. doubt occoured in qs
         battery.remainingCharge();
     }
 
     private static void setInt() {
 
         System.out.println(dot + "setInt" + dot + "\n");
-        Robot robot = new Robot();
+        Robot robot = new Robot(); //qs: How can I declare robot though Robot is not static class?
         robot.setValue( 7 );
         System.out.println("This is Robot no. "+robot.getValue());
         robot.start();

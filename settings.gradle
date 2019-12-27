@@ -1,0 +1,2 @@
+include ':app', ':inner_class_lib'
+rootProject.name='Inner Class Java Practice'

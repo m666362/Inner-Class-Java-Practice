@@ -2,7 +2,7 @@ package org.richit.inner_class_lib;
 
 public class Robot {
 
-    public static int value;
+    private static int value;
 
     public int getValue() {
         return value;
@@ -25,7 +25,17 @@ public class Robot {
     }
 
     public void start(){
-        Brain brain = new Brain();
+        Brain brain = new Brain(); // as Brain is private, so to access it from other class this method should be used
         brain.processor();
+        final String name = "Robert";
+        class Temp{
+            public void doSomething(){
+                System.out.println("This is Class: Robot, Method: start(), class: Temp");
+                System.out.println("Id is : " + value);
+                System.out.println("Name is : " + name);
+            }
+        }
+        Temp temp = new Temp();
+        temp.doSomething();
     }
 }

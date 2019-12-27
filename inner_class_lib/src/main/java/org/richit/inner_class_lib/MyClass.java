@@ -17,6 +17,7 @@ public class MyClass {
         System.out.println(dot+end+dot);
         System.out.println();
     }
+    Robot.Battery battery = new Robot.Battery();
 
     public static void main(String[] args) {
 
@@ -24,8 +25,16 @@ public class MyClass {
 
         setInt();
         innerClass();
+        innerClassInmethod();
 
         endProgramme();
+    }
+
+    private static void innerClassInmethod() {
+
+        System.out.println(dot + "innerClassInmethod" + dot + "\n");
+        Robot robot = new Robot();
+        robot.start();
     }
 
     public static void innerClass() {
@@ -40,7 +49,6 @@ public class MyClass {
         Robot robot = new Robot(); //qs: How can I declare robot though Robot is not static class?
         robot.setValue( 7 );
         System.out.println("This is Robot no. "+robot.getValue());
-        robot.start();
         System.out.println();
     }
 }
